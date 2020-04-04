@@ -190,50 +190,6 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
-                xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput146")
-                .setName("ID card")
-                .setRequired(true)
-                .setDirtyMark(false)
-                .setLocked(true)
-                .setLeft("0em")
-                .setTop("28.333333333333332em")
-                .setWidth("43.833333333333336em")
-                .setLabelSize("8em")
-                .setLabelCaption("ID")
-                .setType("file")
-                .afterPropertyChanged({
-                    "newbies":{
-                        "Nexdlesaq":"xui.UI.Link"
-                    },
-                    "actions":[
-                        {
-                            "desc":"Action 1",
-                            "type":"control",
-                            "target":"{temp.newbies.Nexdlesaq}",
-                            "args":[
-                                {
-                                    "afterAppend":"https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz"
-                                }
-                            ],
-                            "method":"setEvents"
-                        }
-                    ]
-                })
-                .onClick([
-                    {
-                        "desc":"Action 1",
-                        "type":"other",
-                        "target":"url",
-                        "args":[ ],
-                        "method":"selectFile",
-                        "onOK":0,
-                        "event":1
-                    }
-                ])
-            );
-            
-            append(
                 xui.create("xui.UI.PopMenu")
                 .setHost(host,"xui_ui_popmenu23")
                 .setItems([
@@ -277,6 +233,19 @@ xui.Class('App', 'xui.Module',{
                 ])
             );
             
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput335")
+                .setRequired(true)
+                .setDirtyMark(false)
+                .setLeft("0em")
+                .setTop("28.333333333333332em")
+                .setWidth("43.833333333333336em")
+                .setLabelSize("8em")
+                .setLabelCaption("ID")
+                .setType("file")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
@@ -286,7 +255,21 @@ xui.Class('App', 'xui.Module',{
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
         },
-        functions:{ },
+        functions:{
+            "Save":{
+                "desc":"Save as",
+                "params":[ ],
+                "actions":[
+                    {
+                        "desc":"Action 1",
+                        "type":"control",
+                        "target":"xui_ui_popmenu23",
+                        "args":[ ],
+                        "method":"activate"
+                    }
+                ]
+            }
+        },
         events:{
             "onModulePropChange":[
                 {
@@ -300,6 +283,19 @@ xui.Class('App', 'xui.Module',{
                         }
                     ],
                     "method":"setProperties"
+                }
+            ],
+            "onFragmentChanged":[
+                {
+                    "desc":"Action 1",
+                    "type":"control",
+                    "target":"xui_ui_popmenu23",
+                    "args":[
+                        undefined,
+                        undefined,
+                        "{args[https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz]}"
+                    ],
+                    "method":"show"
                 }
             ]
         }
