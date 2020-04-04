@@ -233,6 +233,50 @@ xui.Class('App', 'xui.Module',{
                 ])
             );
             
+            append(
+                xui.create("xui.UI.PopMenu")
+                .setHost(host,"xui_ui_popmenu23")
+                .setItems([
+                    {
+                        "id":"a",
+                        "caption":"item 1",
+                        "imageClass":"xui-icon-number1"
+                    },
+                    {
+                        "id":"b",
+                        "caption":"item 2",
+                        "imageClass":"xui-icon-number2"
+                    },
+                    {
+                        "id":"c",
+                        "caption":"item 3",
+                        "imageClass":"xui-icon-number3"
+                    },
+                    {
+                        "id":"d",
+                        "caption":"item 4",
+                        "imageClass":"xui-icon-number4",
+                        "disabled":true
+                    }
+                ])
+                .onShowSubMenu([
+                    {
+                        "desc":"Action 1",
+                        "type":"control",
+                        "target":"xui_ui_popmenu23",
+                        "args":[ ],
+                        "method":"show",
+                        "conditions":[
+                            {
+                                "left":"{page.xui_ui_comboinput146}",
+                                "symbol":"non-empty",
+                                "right":""
+                            }
+                        ]
+                    }
+                ])
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
@@ -242,7 +286,23 @@ xui.Class('App', 'xui.Module',{
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
         },
-        functions:{ }
+        functions:{ },
+        events:{
+            "onModulePropChange":[
+                {
+                    "desc":"Action 1",
+                    "type":"control",
+                    "target":"xui_ui_popmenu23",
+                    "args":[
+                        { },
+                        {
+                            "display":"https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz"
+                        }
+                    ],
+                    "method":"setProperties"
+                }
+            ]
+        }
         /*,
         // To determine how properties affects this module
         propSetAction : function(prop){
