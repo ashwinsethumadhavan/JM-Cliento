@@ -265,6 +265,17 @@ xui.Class('App', 'xui.Module',{
                 })
             );
             
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button3")
+                .setRequired(true)
+                .setDirtyMark(false)
+                .setLeft("23.333333333333332em")
+                .setTop("33.333333333333336em")
+                .setWidth("7.083333333333333em")
+                .setCaption("Submit")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
