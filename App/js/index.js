@@ -128,7 +128,6 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"xui_ui_comboinput11")
                 .setName("Mode of Communication")
                 .setRequired(true)
-                .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("25em")
                 .setWidth("43.833333333333336em")
