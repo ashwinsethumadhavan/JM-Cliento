@@ -274,6 +274,26 @@ xui.Class('App', 'xui.Module',{
                 .setTop("33.333333333333336em")
                 .setWidth("7.083333333333333em")
                 .setCaption("Submit")
+                .onValueChange({
+                    "newbies":{
+                        "Ni7a2b3on":"xui.DataBinder"
+                    },
+                    "actions":[
+                        {
+                            "desc":"Action 1",
+                            "type":"control",
+                            "target":"{temp.newbies.Ni7a2b3on}",
+                            "args":[
+                                "{temp.newbies.Ni7a2b3on.checkValid()}",
+                                "global",
+                                "Shheett",
+                                "{args[2]}"
+                            ],
+                            "method":"checkValid",
+                            "redirection":"other:callback:call"
+                        }
+                    ]
+                })
             );
             
             return children;
