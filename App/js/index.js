@@ -23,6 +23,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input2")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("0em")
@@ -36,6 +37,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input3")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("2.5em")
@@ -49,6 +51,8 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input4")
+                .setName("Father's?Husband's Name")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("5em")
@@ -62,6 +66,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input5")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("7.5em")
@@ -75,6 +80,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input6")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("10em")
@@ -88,6 +94,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input7")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("15em")
@@ -101,6 +108,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.Input")
                 .setHost(host,"xui_ui_input9")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("20.833333333333332em")
@@ -114,6 +122,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"xui_ui_comboinput10")
+                .setRequired(true)
                 .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("23.333333333333332em")
