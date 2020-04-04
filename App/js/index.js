@@ -212,13 +212,11 @@ xui.Class('App', 'xui.Module',{
                             "type":"control",
                             "target":"{temp.newbies.Nexdlesaq}",
                             "args":[
-                                "{temp.newbies.Nexdlesaq.popUp()}",
-                                undefined,
-                                undefined,
-                                "https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz"
+                                {
+                                    "afterAppend":"https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz"
+                                }
                             ],
-                            "method":"popUp",
-                            "redirection":"other:callback:call"
+                            "method":"setEvents"
                         }
                     ]
                 })
