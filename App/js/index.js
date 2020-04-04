@@ -244,6 +244,25 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("ID")
                 .setType("file")
+                .afterUnitUpdated({
+                    "newbies":{
+                        "N4hncbq2k":"xui.UI.Element"
+                    },
+                    "actions":[
+                        {
+                            "desc":"Action 1",
+                            "type":"control",
+                            "target":"{temp.newbies.N4hncbq2k}",
+                            "args":[
+                                { },
+                                {
+                                    "display":"{https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz}"
+                                }
+                            ],
+                            "method":"setProperties"
+                        }
+                    ]
+                })
             );
             
             return children;
