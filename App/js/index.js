@@ -137,6 +137,7 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"xui_ui_comboinput11")
                 .setName("Mode of Communication")
                 .setRequired(true)
+                .setDirtyMark(false)
                 .setLeft("0em")
                 .setTop("25em")
                 .setWidth("43.833333333333336em")
@@ -170,6 +171,44 @@ xui.Class('App', 'xui.Module',{
                         "id":"e",
                         "caption":"Registered Post",
                         "imageClass":"xui-icon-number5"
+                    }
+                ])
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput113")
+                .setName("Date")
+                .setRequired(true)
+                .setDirtyMark(false)
+                .setLeft("0em")
+                .setTop("26.666666666666668em")
+                .setWidth("43.833333333333336em")
+                .setLabelSize("8em")
+                .setLabelCaption("Date")
+                .setType("date")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput146")
+                .setRequired(true)
+                .setDirtyMark(false)
+                .setLeft("0em")
+                .setTop("28.333333333333332em")
+                .setWidth("43.833333333333336em")
+                .setLabelSize("8em")
+                .setLabelCaption("ID")
+                .setType("file")
+                .onClick([
+                    {
+                        "desc":"Action 1",
+                        "type":"other",
+                        "target":"url",
+                        "args":[ ],
+                        "method":"selectFile",
+                        "onOK":0,
+                        "event":1
                     }
                 ])
             );
