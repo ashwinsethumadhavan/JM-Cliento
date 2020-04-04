@@ -192,6 +192,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"xui_ui_comboinput146")
+                .setName("ID card")
                 .setRequired(true)
                 .setDirtyMark(false)
                 .setLocked(true)
@@ -201,7 +202,26 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("ID")
                 .setType("file")
-                .setName("ID card")
+                .afterPropertyChanged({
+                    "newbies":{
+                        "Nexdlesaq":"xui.UI.Link"
+                    },
+                    "actions":[
+                        {
+                            "desc":"Action 1",
+                            "type":"control",
+                            "target":"{temp.newbies.Nexdlesaq}",
+                            "args":[
+                                "{temp.newbies.Nexdlesaq.popUp()}",
+                                undefined,
+                                undefined,
+                                "https://drive.google.com/drive/u/3/folders/1WaKFEzyEju82-uHNu32YfcPx963oQBNz"
+                            ],
+                            "method":"popUp",
+                            "redirection":"other:callback:call"
+                        }
+                    ]
+                })
                 .onClick([
                     {
                         "desc":"Action 1",
