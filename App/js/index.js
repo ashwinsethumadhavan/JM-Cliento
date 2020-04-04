@@ -153,13 +153,13 @@ xui.Class('App', 'xui.Module',{
                     },
                     {
                         "id":"d",
-                        "caption":"Registered Post",
+                        "caption":"Post",
                         "imageClass":"xui-icon-number4",
-                        "disabled":true
+                        "iconFontSize":""
                     },
                     {
                         "id":"e",
-                        "caption":"Post",
+                        "caption":"Registered Post",
                         "imageClass":"xui-icon-number5"
                     }
                 ])
