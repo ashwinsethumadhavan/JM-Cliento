@@ -194,12 +194,14 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"xui_ui_comboinput146")
                 .setRequired(true)
                 .setDirtyMark(false)
+                .setLocked(true)
                 .setLeft("0em")
                 .setTop("28.333333333333332em")
                 .setWidth("43.833333333333336em")
                 .setLabelSize("8em")
                 .setLabelCaption("ID")
                 .setType("file")
+                .setName("ID card")
                 .onClick([
                     {
                         "desc":"Action 1",
